@@ -1,6 +1,6 @@
 %define module	Youri-Package-RPM-Builder
 %define name	perl-%{module}
-%define version 0.1.0
+%define version 0.1.1
 %define release %mkrel 1
 
 Name:		%{name}
