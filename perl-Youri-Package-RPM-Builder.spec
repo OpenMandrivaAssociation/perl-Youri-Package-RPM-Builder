@@ -20,6 +20,7 @@ BuildRequires:	perl(String::ShellQuote)
 BuildRequires:	perl-version
 Requires:	    perl-version
 BuildArch:	    noarch
+BuildRoot:	    %{_tmppath}/%{name}-%{version}
 
 %description
 YOURI stands for "Youri Offers an Upload & Repository Infrastucture". It aims
