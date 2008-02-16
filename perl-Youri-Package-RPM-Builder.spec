@@ -1,6 +1,6 @@
 %define module	Youri-Package-RPM-Builder
 %define name	perl-%{module}
-%define version 0.1.1
+%define version 0.1.2
 %define release %mkrel 1
 
 Name:		%{name}
@@ -10,7 +10,7 @@ Summary:	Build RPM packages
 License:	GPL or Artistic
 Group:		Development/Other
 Url:		http://youri.zarb.org
-Source:		http://youri.zarb.or/download/%{module}-%{version}.tar.gz
+Source:		http://youri.zarb.org/download/%{module}-%{version}.tar.gz
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
