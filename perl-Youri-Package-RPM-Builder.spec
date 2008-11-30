@@ -36,7 +36,7 @@ This module build rpm packages.
 %make
 
 %check
-%__make test
+%make test TEST_AUTHOR=foo
 
 %install
 rm -rf %{buildroot}
