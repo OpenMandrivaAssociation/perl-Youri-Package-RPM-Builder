@@ -3,13 +3,14 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 3
 Summary:	Build RPM packages
 License:	GPL or Artistic
 Group:		Development/Other
 Url:		http://youri.zarb.org
-Source:		http://youri.zarb.org/download/%{upstream_name}-%{upstream_version}.tar.gz
-BuildRequires:	perl(RPM4)
+Source0:	http://youri.zarb.org/download/%{upstream_name}-%{upstream_version}.tar.gz
+Patch0:		Youri-Package-RPM-Builder-0.2.0-rpm5-port.patch
+BuildRequires:	perl(RPM)
 BuildRequires:	perl(Test::Exception)
 BuildRequires:	perl(String::ShellQuote)
 BuildRequires:	perl-version
@@ -24,7 +25,8 @@ to build tools making management of a coherent set of packages easier.
 This module build rpm packages.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
+%patch0 -p1
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
