@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 4
+Release:    %mkrel 5
 Summary:	Build RPM packages
 License:	GPL or Artistic
 Group:		Development/Other
@@ -26,7 +26,7 @@ This module build rpm packages.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
-%patch0 -p1
+%patch0 -p1 .rpm5~
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
