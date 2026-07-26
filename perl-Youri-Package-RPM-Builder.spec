@@ -1,14 +1,12 @@
 %define upstream_name		Youri-Package-RPM-Builder
-%define upstream_version	0.3.0
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	9
+Version:	0.3.0
+Release:	10
 Summary:	Build RPM packages
 License:	GPL or Artistic
 Group:		Development/Other
 Url:		https://youri.zarb.org
-Source0:	https://cpan.metacpan.org/authors/id/G/GR/GROUSSE/Youri-Package-RPM-Builder-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/G/GR/GROUSSE/Youri-Package-RPM-Builder-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -28,7 +26,7 @@ to build tools making management of a coherent set of packages easier.
 This module build rpm packages.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
